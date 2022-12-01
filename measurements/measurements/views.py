@@ -24,10 +24,6 @@ def check_place(data):
             return True
     return False
 
-
-
-
-
 def MeasurementList(request):
     queryset = Measurement.objects.all()
     context = list(queryset.values('id', 'variable', 'value', 'unit', 'place', 'dateTime'))
