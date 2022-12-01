@@ -19,6 +19,6 @@ def PlaceCreate(request):
         data_json = json.loads(data)
         place = Place()
         place.name = data_json['name']
-        measurement.save()
-        return HttpResponse("successfully created measurement")
+        place.save()
+        return HttpResponse("successfully created place")
         
